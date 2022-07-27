@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React from 'react';
+import './CharList.sass';
+import CharArticle from './CharArticle';
 
 export interface IAppProps {
     headerText: string;
@@ -6,8 +8,9 @@ export interface IAppProps {
 
 export default function CharList ({ headerText }: IAppProps) {
   return (
-    <div>
-      <p> {headerText} </p>
-    </div>
+    <section>
+      <h2> {headerText} </h2>
+    </section>
+    //TODO: load the characters from user (maybe better done in app.tsx, here as props) and render a CharArticle for each one found
   );
 }
