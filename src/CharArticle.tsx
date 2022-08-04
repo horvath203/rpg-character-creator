@@ -1,22 +1,20 @@
 import React from 'react';
-import './CharArticle.sass';
+import {CharacterData} from './Interfaces'
 
-export interface CharProps {
-}
 
-export default function Character ({}: CharProps) {
+export default function Character ({name, age, size, origin, backstory}: CharacterData) {
   return (
-    <article>
-        <p className="name">Name of the character</p>
+    <article className="character">
+        <p className="name">{name}</p>
         <hr/>
-        <img src="" alt="portrait" />
-        <hr/>
-        <h3>Attributes</h3>
-        <p className="age">Age of the character</p>
-        <p className="size">Size of the character</p>
-        <p className="origin">Origin of the character</p>
-        <h3>Backstory</h3>
-        <p className="backstory">Backstory of the character</p>
+        <h3>Attributes:</h3>
+        <div className="attributes">
+          <p className="age">Age: {age}</p>
+          <p className="sizeVal">Size: {size}</p>
+          <p className="orVal">Origin: {origin}</p>
+        </div>
+        <h3>Backstory:</h3>
+        <p className="backstory">{backstory}</p>
     </article>
   );
 }

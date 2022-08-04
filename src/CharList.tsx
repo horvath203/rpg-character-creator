@@ -1,5 +1,4 @@
 import React from 'react';
-import './CharList.sass';
 import CharArticle from './CharArticle';
 
 export interface IAppProps {
